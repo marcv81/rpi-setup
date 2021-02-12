@@ -1,0 +1,5 @@
+CREATE DATABASE telegraf
+CREATE USER telegraf WITH PASSWORD 'telegraf'
+GRANT ALL ON telegraf TO telegraf
+CREATE USER grafana WITH PASSWORD 'grafana'
+GRANT READ ON telegraf TO grafana

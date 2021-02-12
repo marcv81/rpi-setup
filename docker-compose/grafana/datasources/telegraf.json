@@ -1,0 +1,29 @@
+{
+  "id":1,
+  "orgId":1,
+  "name":"Telegraf",
+  "type":"influxdb",
+  "typeLogoUrl":"",
+  "access":"proxy",
+  "url":"http://rpi.localnet:8086/",
+  "password":"grafana",
+  "user":"grafana",
+  "database":"telegraf",
+  "basicAuth":false,
+  "basicAuthUser":"",
+  "basicAuthPassword":"",
+  "withCredentials":false,
+  "isDefault":true,
+  "jsonData":{
+    "httpMode":"GET",
+    "oauthPassThru":false,
+    "tlsAuth":false,
+    "tlsAuthWithCACert":false,
+    "tlsSkipVerify":false
+  },
+  "secureJsonFields":{
+    "password":true
+  },
+  "version":1,
+  "readOnly":false
+}
