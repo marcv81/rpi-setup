@@ -43,6 +43,10 @@ Allow the telegraf user to run smartctl in `/etc/sudoers.d/telegraf`.
 
     telegraf ALL=(root) NOPASSWD: /usr/sbin/smartctl
 
+### CPU stats
+
+Install `cpu_stats.py` from https://github.com/marcv81/cpu-stats to `/usr/local/bin`.
+
 ## Configuration
 
 Use `/etc/telegraf/telegraf.conf` from the files directory.
