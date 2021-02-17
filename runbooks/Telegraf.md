@@ -6,12 +6,8 @@ Download and install Telegraf.
 
     wget https://dl.influxdata.com/telegraf/releases/telegraf-1.17.2_linux_armhf.tar.gz
     tar xvf telegraf-1.17.2_linux_armhf.tar.gz
-    sudo chown -R root:root telegraf-1.17.2/
-    sudo rsync -a telegraf-1.17.2/ /
-    sudo cp /usr/lib/telegraf/scripts/telegraf.service /etc/systemd/system/
-    sudo rm -rf /usr/lib/telegraf/
-    sudo rm -rf /var/log/telegraf/
-    sudo systemctl daemon-reload
+    sudo cp telegraf-1.17.2/usr/bin/telegraf /usr/bin/
+    sudo cp telegraf-1.17.2/usr/lib/telegraf/scripts/telegraf.service /etc/systemd/system/
 
 Create the telegraf user.
 
@@ -53,5 +49,6 @@ Use `/etc/telegraf/telegraf.conf` from the files directory.
 
 Start and enable the service.
 
+    sudo systemctl daemon-reload
     sudo systemctl start telegraf
     sudo systemctl enable telegraf
