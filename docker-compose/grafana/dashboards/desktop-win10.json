@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 2,
-  "id": 2,
+  "id": 3,
   "links": [],
   "panels": [
     {
@@ -56,7 +56,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -310,7 +310,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -564,7 +564,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1019,7 +1019,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1261,7 +1261,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1464,7 +1464,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1663,7 +1663,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1855,7 +1855,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2047,7 +2047,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2239,7 +2239,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.4.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2396,148 +2396,10 @@
         "align": false,
         "alignLevel": null
       }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 8,
-        "x": 8,
-        "y": 27
-      },
-      "hiddenSeries": false,
-      "id": 8,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "connected",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.7",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "free",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "win_disk",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "Percent_Free_Space"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=",
-              "value": "desktop-win10"
-            },
-            {
-              "condition": "AND",
-              "key": "instance",
-              "operator": "=",
-              "value": "C:"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "C:\\ usage",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "percent",
-          "label": null,
-          "logBase": 1,
-          "max": "100",
-          "min": "0",
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
