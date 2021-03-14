@@ -18,14 +18,53 @@ Prevent cloudinit from managing the network. Create `/etc/cloud/cloud.cfg.d/99-d
 
     network: {config: disabled}
 
-Configure netplan. Create `/etc/netplan/01-network.yaml`.
+### Ethernet
+
+Configure the Ethernet interface with systemd-network. Netplan does not support `ConfigureWithoutCarrier` for physical interfaces.
+
+Create `/etc/systemd/network/01-eth0.link`.
+
+    [Match]
+    Driver=bcmgenet smsc95xx lan78xx
+    OriginalName=eth0
+
+    [Link]
+    Name=eth0
+    WakeOnLan=off
+
+Create `/etc/systemd/network/01-eth0.network`.
+
+    [Match]
+    Driver=bcmgenet smsc95xx lan78xx
+    Name=eth0
+
+    [Link]
+    RequiredForOnline=no
+
+    [Network]
+    DHCP=ipv4
+    LinkLocalAddressing=ipv6
+    Address=192.168.100.1/24
+    ConfigureWithoutCarrier=true
+
+    [DHCP]
+    RouteMetric=100
+    UseMTU=true
+
+Apply the configuration.
+
+    systemctl restart systemd-networkd
+
+Test the SSH connection over Ethernet.
+
+    ssh ubuntu@192.168.100.1
+
+### WiFi
+
+Configure the WiFi interface with Netplan. Create `/etc/netplan/01-network.yaml`.
 
     network:
       version: 2
-      ethernets:
-        eth0:
-          dhcp4: false
-          addresses: [192.168.100.1/24]
       wifis:
         wlan0:
           dhcp4: true
@@ -39,11 +78,7 @@ Apply the configuration.
     sudo netplan generate
     sudo netplan apply
 
-Test internet connection.
-
-Test SSH connection over Ethernet.
-
-    ssh ubuntu@192.168.100.1
+Test the internet connection.
 
 ## Fix network-online.target
 
