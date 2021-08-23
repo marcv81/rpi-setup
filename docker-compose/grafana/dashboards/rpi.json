@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 2,
-  "id": 2,
+  "id": 3,
   "links": [],
   "panels": [
     {
@@ -192,6 +192,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:432",
           "format": "celsius",
           "label": null,
           "logBase": 1,
@@ -200,6 +201,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:433",
           "format": "short",
           "label": null,
           "logBase": 1,

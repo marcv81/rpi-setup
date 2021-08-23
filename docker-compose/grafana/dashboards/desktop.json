@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 2,
-  "id": 1,
+  "id": 2,
   "links": [],
   "panels": [
     {
@@ -64,6 +64,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:119",
           "alias": "/_avg$/"
         }
       ],
@@ -292,7 +293,7 @@
           ]
         },
         {
-          "alias": "hdd",
+          "alias": "ssd_sata",
           "groupBy": [
             {
               "params": [
@@ -336,13 +337,13 @@
               "condition": "AND",
               "key": "model",
               "operator": "=",
-              "value": "ST2000LX001-1RG174"
+              "value": "CT2000MX500SSD1"
             },
             {
               "condition": "AND",
               "key": "serial_no",
               "operator": "=",
-              "value": "WDZKNXGD"
+              "value": "2052E4E205F2"
             },
             {
               "condition": "AND",
@@ -646,7 +647,7 @@
           ]
         },
         {
-          "alias": "hdd_avg",
+          "alias": "ssd_sata_avg",
           "groupBy": [
             {
               "params": [
@@ -696,13 +697,13 @@
               "condition": "AND",
               "key": "model",
               "operator": "=",
-              "value": "ST2000LX001-1RG174"
+              "value": "CT2000MX500SSD1"
             },
             {
               "condition": "AND",
               "key": "serial_no",
               "operator": "=",
-              "value": "WDZKNXGD"
+              "value": "2052E4E205F2"
             },
             {
               "condition": "AND",
@@ -788,6 +789,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:124",
           "format": "celsius",
           "label": null,
           "logBase": 1,
@@ -796,6 +798,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:125",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3320,6 +3323,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:324",
           "alias": "write",
           "transform": "negative-Y"
         }
@@ -3379,13 +3383,13 @@
               "condition": "AND",
               "key": "ID_MODEL",
               "operator": "=",
-              "value": "ST2000LX001-1RG174"
+              "value": "CT2000MX500SSD1"
             },
             {
               "condition": "AND",
               "key": "ID_SERIAL_SHORT",
               "operator": "=",
-              "value": "WDZKNXGD"
+              "value": "2052E4E205F2"
             }
           ]
         },
@@ -3440,13 +3444,13 @@
               "condition": "AND",
               "key": "ID_MODEL",
               "operator": "=",
-              "value": "ST2000LX001-1RG174"
+              "value": "CT2000MX500SSD1"
             },
             {
               "condition": "AND",
               "key": "ID_SERIAL_SHORT",
               "operator": "=",
-              "value": "WDZKNXGD"
+              "value": "2052E4E205F2"
             }
           ]
         }
@@ -3455,7 +3459,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "HDD I/O",
+      "title": "SSD (SATA) I/O",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -3471,6 +3475,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:331",
           "format": "Bps",
           "label": null,
           "logBase": 1,
@@ -3479,6 +3484,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:332",
           "format": "short",
           "label": null,
           "logBase": 1,
